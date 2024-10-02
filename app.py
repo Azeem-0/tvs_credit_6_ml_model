@@ -1,8 +1,13 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pickle
 import numpy as np
 
 app = Flask(__name__)
+
+CORS(app)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+
 
 # Load the pickled model
 try:
@@ -15,12 +20,17 @@ except FileNotFoundError:
 # Define the /predict route
 @app.route('/predict', methods=['POST'])
 def predict():
+
+    print("HELLO")
+
     if model is None:
         return jsonify({'error': 'Model not loaded properly.'}), 500
     
     try:
         # Get the JSON data from the request
         data = request.json
+
+        print(data)
 
         # Convert the data into a format the model can predict (assuming input is a list of features)
         features = np.array(data['features']).reshape(1, -1)
