@@ -27,11 +27,11 @@ The AI/ML loan suggester model provides:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/loan-suggester-backend.git
-   cd loan-suggester-backend ```
-  ```FLASK_APP=app.py
-  FLASK_ENV=development```
-```flask run
-```
+   git clone https://github.com/Azeem-0/tvs_credit_6_ml_model.git
+   cd tvs_credit_6_ml_model ```
+2. Run the server:
+   ```
+   flask run app.py
+   ```
 
 ##The API will be available at http://localhost:5000
