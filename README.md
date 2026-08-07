@@ -27,7 +27,7 @@ The AI/ML loan suggester model provides:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Azeem-0/tvs_credit_6_ml_model.git
+   git clone https://github.com/azeemshaik025/tvs_credit_6_ml_model.git
    cd tvs_credit_6_ml_model ```
 2. Run the server:
    ```
